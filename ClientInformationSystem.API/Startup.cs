@@ -26,6 +26,7 @@ namespace ClientInformationSystem.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // create the connection to ClientInformationSystem database
             services.AddDbContext<ClientInformationSystemDBContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("ClientInformationSystemDbConnection"));
