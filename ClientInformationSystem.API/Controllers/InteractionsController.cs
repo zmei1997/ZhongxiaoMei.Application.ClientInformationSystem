@@ -14,6 +14,7 @@ namespace ClientInformationSystem.API.Controllers
     public class InteractionsController : ControllerBase
     {
         private readonly IInteractionsService _interactionsService;
+
         public InteractionsController(IInteractionsService interactionsService)
         {
             _interactionsService = interactionsService;

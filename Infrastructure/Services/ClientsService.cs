@@ -15,12 +15,14 @@ namespace Infrastructure.Services
     {
         private readonly IClientsRepository _clientsRepository;
         private readonly IInteractionsRepository _interactionsRepository;
+
         public ClientsService(IClientsRepository clientsRepository, IInteractionsRepository interactionsRepository)
         {
             _clientsRepository = clientsRepository;
             _interactionsRepository = interactionsRepository;
         }
 
+        // Add Client
         public async Task<ClientsInfoResponseModel> AddClient(ClientRequestModel model)
         {
             var client = new Client
@@ -46,6 +48,7 @@ namespace Infrastructure.Services
             return clientsInfo;
         }
 
+        // Delete Client By its Id
         public async Task DeleteClientById(int id)
         {
             var client = await _clientsRepository.GetByIdAsync(id);
@@ -58,6 +61,7 @@ namespace Infrastructure.Services
             await _clientsRepository.DeleteAsync(client);
         }
 
+        // Get client detail by id
         public async Task<ClientsInfoResponseModel> GetClientDetail(int id)
         {
             var client = await _clientsRepository.GetByIdAsync(id);
@@ -73,13 +77,15 @@ namespace Infrastructure.Services
             return clientDetail;
         }
 
+        // Get a list of Client records
         public async Task<List<ClientsInfoResponseModel>> GetClientList()
         {
             var clients = await _clientsRepository.ListAllAsync();
             List<ClientsInfoResponseModel> clientList = new List<ClientsInfoResponseModel>();
             foreach (var client in clients)
             {
-                clientList.Add(new ClientsInfoResponseModel { 
+                clientList.Add(new ClientsInfoResponseModel
+                {
                     Id = client.Id,
                     Name = client.Name,
                     Email = client.Email,
@@ -91,6 +97,7 @@ namespace Infrastructure.Services
             return clientList;
         }
 
+        // Update client by its id
         public async Task<ClientsInfoResponseModel> UpdateClientById(int id, ClientRequestModel model)
         {
             var client = await _clientsRepository.GetByIdAsync(id);

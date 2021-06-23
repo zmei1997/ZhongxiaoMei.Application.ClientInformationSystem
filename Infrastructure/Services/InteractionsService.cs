@@ -16,6 +16,7 @@ namespace Infrastructure.Services
         private readonly IInteractionsRepository _interactionsRepository;
         private readonly IClientsRepository _clientsRepository;
         private readonly IEmployeesRepository _employeesRepository;
+
         public InteractionsService(IInteractionsRepository interactionsRepository, IClientsRepository clientsRepository, IEmployeesRepository employeesRepository)
         {
             _interactionsRepository = interactionsRepository;
@@ -23,6 +24,7 @@ namespace Infrastructure.Services
             _employeesRepository = employeesRepository;
         }
 
+        // Add Interactions
         public async Task<InteractionsResponseModel> AddInteraction(InteractionRequestModel model)
         {
             var interaction = new Interaction
@@ -47,12 +49,14 @@ namespace Infrastructure.Services
             return newInteraction;
         }
 
+        // Delete interactions by its id
         public async Task DeleteInteraction(int id)
         {
             var interaction = await _interactionsRepository.GetByIdAsync(id);
             await _interactionsRepository.DeleteAsync(interaction);
         }
 
+        // Get interaction detail by id
         public async Task<InteractionsResponseModel> GetInteractionDetail(int id)
         {
             var interaction = await _interactionsRepository.GetByIdAsync(id);
@@ -68,6 +72,7 @@ namespace Infrastructure.Services
             return intrDetail;
         }
 
+        // Get interactions with client and employee information
         public async Task<List<InteractionsResponseModel>> GetInteractions()
         {
             var interactions = await _interactionsRepository.GetInteractionsWithClientAndEmployee();
@@ -94,6 +99,7 @@ namespace Infrastructure.Services
             return interactionList;
         }
 
+        // Get interactions by client's id
         public async Task<List<InteractionsResponseModel>> GetInteractionsByClientId(int id)
         {
             var interactions = await _interactionsRepository.GetInteractionsByClientId(id);
@@ -120,6 +126,7 @@ namespace Infrastructure.Services
             return interactionList;
         }
 
+        // Get interactions by employee's id
         public async Task<List<InteractionsResponseModel>> GetInteractionsByEmployeeId(int id)
         {
             var interactions = await _interactionsRepository.GetInteractionsByEmployeeId(id);
@@ -146,6 +153,7 @@ namespace Infrastructure.Services
             return interactionList;
         }
 
+        // Update interaction by its id
         public async Task<InteractionsResponseModel> UpdateInteraction(int id, InteractionRequestModel model)
         {
             var interaction = await _interactionsRepository.GetByIdAsync(id);

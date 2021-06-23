@@ -16,6 +16,7 @@ namespace ClientInformationSystem.API.Controllers
     {
         private readonly IClientsService _clientsService;
         private readonly IInteractionsService _interactionsService;
+
         public ClientsController(IClientsService clientsService, IInteractionsService interactionsService)
         {
             _clientsService = clientsService;

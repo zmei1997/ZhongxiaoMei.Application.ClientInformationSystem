@@ -16,6 +16,7 @@ namespace ClientInformationSystem.API.Controllers
     {
         private readonly IEmployeesService _employeesService;
         private readonly IInteractionsService _interactionsService;
+
         public EmployeesController(IEmployeesService employeesService, IInteractionsService interactionsService)
         {
             _employeesService = employeesService;

@@ -15,12 +15,14 @@ namespace Infrastructure.Services
     {
         private readonly IEmployeesRepository _employeesRepository;
         private readonly IInteractionsRepository _interactionsRepository;
+
         public EmployeesService(IEmployeesRepository employeesRepository, IInteractionsRepository interactionsRepository)
         {
             _employeesRepository = employeesRepository;
             _interactionsRepository = interactionsRepository;
         }
 
+        // Add Employee
         public async Task<EmployeesInfoResponseModel> AddEmployee(EmployeeRequestModel model)
         {
             var employee = new Employee
@@ -42,6 +44,7 @@ namespace Infrastructure.Services
             return newEmployee;
         }
 
+        // Delete employee by its id
         public async Task DeleteEmployeeById(int id)
         {
             var employee = await _employeesRepository.GetByIdAsync(id);
@@ -54,6 +57,7 @@ namespace Infrastructure.Services
             await _employeesRepository.DeleteAsync(employee);
         }
 
+        // Get a list of employee records
         public async Task<List<EmployeesInfoResponseModel>> GetAllEmployees()
         {
             var employees = await _employeesRepository.ListAllAsync();
@@ -70,6 +74,7 @@ namespace Infrastructure.Services
             return employeeList;
         }
 
+        // Get employee detail by Id
         public async Task<EmployeesInfoResponseModel> GetEmployeeDetail(int id)
         {
             var employee = await _employeesRepository.GetByIdAsync(id);
@@ -83,6 +88,7 @@ namespace Infrastructure.Services
             return employeeDetail;
         }
 
+        // update employee by id
         public async Task<EmployeesInfoResponseModel> UpdateEmployeeById(int id, EmployeeRequestModel model)
         {
             var employee = await _employeesRepository.GetByIdAsync(id);

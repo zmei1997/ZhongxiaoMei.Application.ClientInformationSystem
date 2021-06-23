@@ -13,7 +13,6 @@ namespace Infrastructure.Data
     {
         public ClientInformationSystemDBContext(DbContextOptions<ClientInformationSystemDBContext> options):base(options)
         {
-
         }
 
         public DbSet<Client> Clients { get; set; }
