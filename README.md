@@ -20,3 +20,5 @@
 <img src="https://github.com/zmei1997/Training-Assignments/blob/main/FinalCodingScreenshot/viewInterEmp.PNG" height="80%" width="80%"> <br>
 ### .Net appSettings for database connection
 <img src="https://github.com/zmei1997/Training-Assignments/blob/main/FinalCodingScreenshot/.netAppSettings.PNG" height="80%" width="80%"> <br>
+### APIs
+<img src="https://github.com/zmei1997/Training-Assignments/blob/main/FinalCodingScreenshot/api.png" height="80%" width="80%"> <br>
