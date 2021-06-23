@@ -1,4 +1,4 @@
-### Home Page
+### Home Page: Dashboard of Employees list and Clients list
 <img src="https://github.com/zmei1997/Training-Assignments/blob/main/FinalCodingScreenshot/homepage.PNG" height="80%" width="80%"> <br>
 ### Add New Client Page
 <img src="https://github.com/zmei1997/Training-Assignments/blob/main/FinalCodingScreenshot/addNewClient.PNG" height="80%" width="80%"> <br>
@@ -18,3 +18,5 @@
 <img src="https://github.com/zmei1997/Training-Assignments/blob/main/FinalCodingScreenshot/ViewIntrclient.PNG" height="80%" width="80%"> <br>
 ### Click one of employee's name, interactions happened for that employee will display
 <img src="https://github.com/zmei1997/Training-Assignments/blob/main/FinalCodingScreenshot/viewInterEmp.PNG" height="80%" width="80%"> <br>
+### .Net appSettings for database connection
+<img src="https://github.com/zmei1997/Training-Assignments/blob/main/FinalCodingScreenshot/.netAppSettings.PNG" height="80%" width="80%"> <br>
