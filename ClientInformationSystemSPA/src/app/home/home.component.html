@@ -21,7 +21,7 @@
               <td>{{client.email}}</td>
               <td>{{client.phones}}</td>
               <td>{{client.address}}</td>
-              <td>{{client.addedOn}}</td>
+              <td>{{client.addedOn | date: 'shortDate'}}</td>
               <td><a class="btn btn-primary" [routerLink]="['client/', client.id]" role="button">Update</a></td>
               <td><a class="btn btn-danger" (click)="deleteClient(client.id)" role="button">Delete</a></td>
             </tr>

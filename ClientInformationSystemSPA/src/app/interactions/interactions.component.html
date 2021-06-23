@@ -22,7 +22,7 @@
             <td>{{interaction.empId}}</td>
             <td><a [routerLink]="['employee/', interaction.empId]">{{interaction.employeeName}}</a></td>
             <td>{{interaction.intType}}</td>
-            <td>{{interaction.intDate}}</td>
+            <td>{{interaction.intDate | date: 'shortDate'}}</td>
             <td>{{interaction.remarks}}</td>
             <td><a class="btn btn-primary" [routerLink]="['/interactions/', interaction.id]" role="button">Update</a></td>
             <td><a class="btn btn-danger" (click)="deleteInteraction(interaction.id)" role="button">Delete</a></td>

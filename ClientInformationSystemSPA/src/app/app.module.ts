@@ -17,6 +17,7 @@ import { EditEmployeeComponent } from './employees/edit-employee/edit-employee.c
 import { EditClientInteractionsComponent } from './interactions/client-interaction/edit-client-interactions/edit-client-interactions.component';
 import { EditEmployeeInteractionsComponent } from './interactions/employee-interaction/edit-employee-interactions/edit-employee-interactions.component';
 import { EditInteractionComponent } from './interactions/edit-interaction/edit-interaction.component';
+import { FooterComponent } from './core/layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { EditInteractionComponent } from './interactions/edit-interaction/edit-i
     EditClientInteractionsComponent,
     EditEmployeeInteractionsComponent,
     EditInteractionComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

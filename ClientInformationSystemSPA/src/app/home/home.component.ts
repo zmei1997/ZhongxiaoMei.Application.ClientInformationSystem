@@ -1,10 +1,9 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { ClientService } from '../services/client.service';
 import { EmployeeService } from '../services/employee.service';
 import { Client } from '../shared/models/client';
 import { Employee } from '../shared/models/employee';
-import { NewClient } from '../shared/models/newClient';
 
 @Component({
   selector: 'app-home',
